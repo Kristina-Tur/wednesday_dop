@@ -7,7 +7,12 @@ import { SlowComponent } from './slowComponent/SlowComponent';
 export const Task_3 = () => {
   const [value, setValue] = useState('');
 
-  const onChange = (event: ChangeEvent<HTMLInputElement>) => setValue(event.currentTarget.value);
+  const onChange = (event: ChangeEvent<HTMLInputElement>) => {
+      console.log('Task_3')
+      return (
+          setValue(event.currentTarget.value)
+      )
+}
 
   return (
     <div>
